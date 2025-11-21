@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoh Universe — Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Shoh <span>Universe</span></div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <h1 class="title">Salom, Men <span>Shohjahon</span></h1>
+        <p class="subtitle">Frontend Developer • UI/UX Lover • Creator</p>
+
+        <button class="btn">View Projects</button>
+
+        <div class="glow"></div>
+    </section>// ...existing code...
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoh Universe — Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    :root{
+      --accent1: #ff5f6d;
+      --accent2: #ffc371;
+      --bg: #0f0f10;
+      --card: #111214;
+      --glass: rgba(255,255,255,0.04);
+      --muted: #c7c7c7;
+    }
+
+    /* Base improvements */
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+
+    /* NAV hover */
+    .navbar nav a{
+      color:var(--muted);
+      position:relative;
+      padding:6px 8px;
+      transition: color .22s ease, transform .18s ease;
+    }
+    .navbar nav a::after{
+      content:"";
+      position:absolute;
+      left:8px;
+      right:8px;
+      bottom:-4px;
+      height:3px;
+      border-radius:3px;
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      transform:scaleX(0);
+      transform-origin:left;
+      transition:transform .24s cubic-bezier(.2,.9,.3,1);
+      opacity:0.95;
+    }
+    .navbar nav a:hover{
+      color:#fff;
+      transform:translateY(-3px);
+    }
+    .navbar nav a:hover::after{ transform:scaleX(1); }
+
+    /* Hero improvements */
+    .hero .title span{
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      display:inline-block;
+      transition:transform .28s ease;
+    }
+    .hero .title span:hover{ transform:translateY(-4px) rotate(-1deg); }
+
+    .glow{
+      position:absolute; inset:auto auto 20% 50%;
+      width:360px;height:360px;margin-left:-180px;
+      background:radial-gradient(circle at center, rgba(255,95,109,0.18), transparent 40%);
+      filter:blur(40px); pointer-events:none; z-index:0;
+      transition:opacity .4s ease;
+    }
+
+    /* Button styles */
+    .btn{
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      color:#fff;
+      border:none;
+      padding:10px 18px;
+      border-radius:10px;
+      cursor:pointer;
+      box-shadow:0 6px 18px rgba(255,95,109,0.12);
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .btn:hover{ transform:translateY(-5px) scale(1.02); box-shadow:0 14px 36px rgba(255,95,109,0.16); }
+
+    /* Projects cards */
+    .project-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+    .project-card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      transition:transform .22s cubic-bezier(.2,.9,.3,1), box-shadow .22s ease;
+      border:1px solid transparent;
+    }
+    .project-card:hover{
+      transform:translateY(-10px) scale(1.02);
+      box-shadow:0 20px 40px rgba(2,6,23,0.6);
+      border-color:rgba(255,255,255,0.04);
+    }
+
+    /* Skill badges */
+    .skills-box{ display:flex;flex-wrap:wrap; gap:10px; }
+    .skill{
+      background:var(--glass);
+      padding:8px 12px; border-radius:999px; color:var(--muted);
+      transition:transform .18s ease, background .18s ease, color .18s ease;
+    }
+    .skill:hover{
+      transform:translateY(-6px) scale(1.03);
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      color:#111;
+    }
+
+    /* Contact inputs */
+    .contact-form input, .contact-form textarea{
+      width:100%; padding:12px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.04);
+      background:transparent; color:#fff; resize:vertical; transition:box-shadow .16s ease, transform .12s ease;
+    }
+    .contact-form input:focus, .contact-form textarea:focus{
+      outline:none;
+      box-shadow:0 8px 30px rgba(255,147,147,0.06), 0 0 0 4px rgba(255,95,109,0.06);
+      transform:translateY(-3px);
+      border-color:rgba(255,255,255,0.08);
+    }
+
+    /* small responsive tweaks */
+    @media (max-width:640px){
+      .navbar nav{ display:flex; gap:8px; flex-wrap:wrap; }
+      .hero .title{ font-size:1.6rem; }
+    }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Shoh <span>Universe</span></div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero" style="position:relative; padding:60px 20px;">
+        <h1 class="title">Salom, Men <span>Shohjahon</span></h1>
+        <p class="subtitle">Frontend Developer • UI/UX Lover • Creator</p>
+
+        <button class="btn" id="viewProjects">View Projects</button>
+
+        <div class="glow" aria-hidden="true"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+            Men yosh va iste’dodli frontend developer man. Zamonaviy UI/UX, responsive dizaynlar,
+            interaktiv animatsiyalar yaratishni yaxshi ko‘raman. Maqsadim — professional web-dasturchi
+            bo‘lish va o‘z loyihalarim orqali boshqalarga foyda yetkazish.
+        </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-box">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Bootstrap</div>
+            <div class="skill">Git & GitHub</div>
+            <div class="skill">Responsive Design</div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-grid">
+            <div class="project-card" tabindex="0" role="article" aria-label="Landing Page project">
+                <h3>Landing Page</h3>
+                <p>Zamonaviy dark landing page.</p>
+            </div>
+
+            <div class="project-card" tabindex="0" role="article" aria-label="Portfolio Website project">
+                <h3>Portfolio Website</h3>
+                <p>Toza, minimal, responsiv portfolio.</p>
+            </div>
+
+            <div class="project-card" tabindex="0" role="article" aria-label="UI Components project">
+                <h3>UI Components</h3>
+                <p>Button, card, nav kabi UI elementlar to‘plami.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Xabar yuborildi!');">
+            <input type="text" placeholder="Ismingiz" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Xabar..." required rows="5"></textarea>
+            <button type="submit" class="btn">Yuborish</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        © 2025 Shoh Universe — All Rights Reserved
+    </footer>
+
+    <script>
+    // Smooth scroll for View Projects button and nav links
+    document.getElementById('viewProjects')?.addEventListener('click', function(){
+      document.querySelector('#projects')?.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+    document.querySelectorAll('.navbar nav a').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        // small offset for fixed header if needed
+        const target = document.querySelector(a.getAttribute('href'));
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+
+    // Keyboard focus style: enter opens project card (example)
+    document.querySelectorAll('.project-card').forEach(card=>{
+      card.addEventListener('keydown', (e)=>{
+        if(e.key === 'Enter' || e.key === ' '){ card.classList.add('active'); setTimeout(()=>card.classList.remove('active'),300); }
+      });
+    });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```// filepath: c:\Users\User\Desktop\portfolio\index.html
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+            Men yosh va iste’dodli frontend developer man. Zamonaviy UI/UX, responsive dizaynlar,
+            interaktiv animatsiyalar yaratishni yaxshi ko‘raman. Maqsadim — professional web-dasturchi
+            bo‘lish va o‘z loyihalarim orqali boshqalarga foyda yetkazish.
+        </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-box">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Bootstrap</div>
+            <div class="skill">Git & GitHub</div>
+            <div class="skill">Responsive Design</div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Landing Page</h3>
+                <p>Zamonaviy dark landing page.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Toza, minimal, responsiv portfolio.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>UI Components</h3>
+                <p>Button, card, nav kabi UI elementlar to‘plami.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Ismingiz" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Xabar..." required></textarea>
+            <button type="submit" class="btn">Yuborish</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        © 2025 Shoh Universe — All Rights Reserved
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
